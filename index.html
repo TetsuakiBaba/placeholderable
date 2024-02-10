@@ -40,6 +40,13 @@
                         id="cdn">&lt;script src="https://cdn.jsdelivr.net/gh/TetsuakiBaba/placeholderable@5dbac43/placeholderable.js" crossorigin="anonymous" type="text/javascript">&lt;/script&gt;</code>
                         </pre>
                 </div>
+                <div class="alert alert-warning" role="alert">
+                    <i class="bi bi-exclamation-diamond "></i>
+                    If you are dynamically generating img tags using javascript or other methods, call the
+                    placeholderable() function after the DOM generation is complete. placeholderable() function checks
+                    all img tags and returns the corresponding part in the canvas replace the corresponding part with
+                    the canvas.
+                </div>
             </div>
             <h1>Usage</h1>
             <p>
