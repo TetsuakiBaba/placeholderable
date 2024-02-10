@@ -26,13 +26,33 @@
                 </p>
             </div>
             <div class="col-12 mt-4">
-                <h2>CDN</h2>
+                <h1>Setup</h1>
+                <p>1. Include the following code in the head section of your HTML file.</p>
                 <button class="btn btn-sm btn-outline-dark" data-clipboard-target="#cdn"><i
                         class="bi bi-clipboard"></i></button>
-                <code id="cdn">sdfadsf</code>
-
+                <div class="alert alert-light" role="alert">
+                    <pre class="text-wrap"><code 
+                        id="cdn">&lt;script src="https://cdn.jsdelivr.net/gh/TetsuakiBaba/placeholderable/placeholderable.js" crossorigin="anonymous" type="text/javascript">&lt;/script&gt;</code>
+                        </pre>
+                </div>
+                <p>2. Call placeholderable() after completion of dom loading in the following manner.</p>
+                <button class="btn btn-sm btn-outline-dark" data-clipboard-target="#usage"><i
+                        class="bi bi-clipboard"></i></button>
+                <div class="alert alert-light" role="alert">
+                    <pre><code id="usage">window.onload = function () {placeholderable();};</code></pre>
+                </div>
             </div>
-            <div class="col-12 mt-4">
+            <h1>Usage</h1>
+            <p>
+                By inserting a space in the src attribute within the img tag, you can indicate that the img is an image
+                insert for use by the placeholderable. Options such as color, text, etc. can be added after the space
+                with "?" symbol after the space.
+            </p>
+            <p>
+                Copy and paste the following sample code anywhere you like in the
+                body tag of your HTML file to see how it works.
+            </p>
+            <div class="col-12">
 
                 <table class="table mt-4 text-center">
                     <thead>
@@ -50,11 +70,11 @@
 
                             </td>
                             <td>
-                                <pre class="text-wrap"><code id="sample01">&lt;img data-ph /&gt;</code></pre>
+                                <pre class="text-wrap"><code id="sample01">&lt;img src=" " /&gt;</code></pre>
                                 </pre>
                             </td>
                             <td>
-                                <img data-ph class="img-fluid" />
+                                <img src=" " class="img-fluid" />
                             </td>
                         </tr>
                         <tr>
@@ -63,11 +83,11 @@
                                         class="bi bi-clipboard"></i></button>
                             </td>
                             <td>
-                                <pre class="text-wrap"><code class="text-break" id="sample02">&lt;img data-ph data-ph-width="150"
-                                    data-ph-height="150" /&gt;</code></pre>
+                                <pre
+                                    class="text-wrap"><code class="text-break" id="sample02">&lt;img src=" ?width=150&height=150" /&gt;</code></pre>
                             </td>
                             <td>
-                                <img data-ph data-ph-width="150" data-ph-height="150" class="img-fluid" />
+                                <img src=" ?width=150&height=150" class="img-fluid" />
                             </td>
                         </tr>
                         <tr>
@@ -77,10 +97,10 @@
                             </td>
                             <td>
                                 <pre
-                                    class="text-wrap"><code id="sample03">&lt;img data-ph data-ph-text="hello, placeholderable" /&gt;</code></pre>
+                                    class="text-wrap"><code id="sample03">&lt;img src=" ?text=hello, placeholderable" /&gt;</code></pre>
                             </td>
                             <td>
-                                <img data-ph data-ph-text="hello, placeholderable" class="img-fluid" />
+                                <img src=" ?text=hello, placeholderable" class="img-fluid" />
                             </td>
                         </tr>
                         <tr>
@@ -90,10 +110,10 @@
                             </td>
                             <td>
                                 <pre
-                                    class="text-wrap"><code id="sample04">&lt;img data-ph data-ph-bgcolors="#FF5555" /&gt;</code></pre>
+                                    class="text-wrap"><code id="sample04">&lt;img src=" ?bgcolors=#FF5555" /&gt;</code></pre>
                             </td>
                             <td>
-                                <img data-ph data-ph-bgcolors="#FF5555" class="img-fluid" />
+                                <img src=" ?bgcolors=#FF5555" class="img-fluid" />
                             </td>
                         </tr>
                         <tr>
@@ -103,10 +123,10 @@
                             </td>
                             <td>
                                 <pre
-                                    class="text-wrap"><code id="sample05">&lt;img data-ph data-ph-bgcolors="#FF5555#55FF55#5555FF" /&gt;</code></pre>
+                                    class="text-wrap"><code id="sample05">&lt;img src=" ?bgcolors="#FF5555#55FF55#5555FF" /&gt;</code></pre>
                             </td>
                             <td>
-                                <img data-ph data-ph-bgcolors="#FF5555#55FF55#5555FF" class="img-fluid" />
+                                <img src=" ?bgcolors=#FF5555#55FF55#5555FF" class="img-fluid" />
                             </td>
                         </tr>
                         <tr>
@@ -116,10 +136,10 @@
                             </td>
                             <td>
                                 <pre
-                                    class="text-wrap"><code id="sample06">&lt;img data-ph data-ph-colors="#FF5555" /&gt;</code></pre>
+                                    class="text-wrap"><code id="sample06">&lt;img src=" ?colors=#FF5555" /&gt;</code></pre>
                             </td>
                             <td>
-                                <img data-ph data-ph-colors="#FF5555" class="img-fluid" />
+                                <img src=" ?colors=#FF5555" class="img-fluid" />
                             </td>
                         </tr>
                         <tr>
@@ -129,10 +149,10 @@
                             </td>
                             <td>
                                 <pre
-                                    class="text-wrap"><code id="sample07">&lt;img data-ph data-ph-colors="#FF5555#55FF55#5555FF" /&gt;</code></pre>
+                                    class="text-wrap"><code id="sample07">&lt;img src=" ?colors=#FF5555#55FF55#5555FF" /&gt;</code></pre>
                             </td>
                             <td>
-                                <img data-ph data-ph-colors="#FF5555#55FF55#5555FF" class="img-fluid" />
+                                <img src=" ?colors=#FF5555#55FF55#5555FF" class="img-fluid" />
                             </td>
                         </tr>
                     </tbody>
@@ -157,20 +177,15 @@
     crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
 <script src="placeholderable.js"></script>
-
 <script>
-    // 50こまでの画像を生成
-    function createSamples() {
-        for (let i = 1; i <= 50; i++) {
-            const img = document.createElement('img');
-            img.setAttribute('data-ph', '');
-            img.setAttribute('data-ph-text', ` `);
-            img.setAttribute('data-ph-width', '5');
-            img.setAttribute('data-ph-height', '200');
-            document.querySelector('#demo').appendChild(img);
-        }
+    // 50このサンプルを #demo に作成
+    for (let i = 0; i < 50; i++) {
+        let img = document.createElement('img');
+        img.src = ` ?text= &width=5&height=200`;
+        img.className = 'img-fluid';
+        document.getElementById('demo').appendChild(img);
     }
-    createSamples();
+
     // すべてのimgタグに対して画像を生成
     window.onload = function () {
         placeholderable();
