@@ -18,12 +18,14 @@ function placeholderableGenerateImage(element) {
     const defaultText = `${defaultWidth}x${defaultHeight}`; // デフォルトのテキストオプション
     const defaultBgColors = ['#F2529D', '#A99CD9', '#9080F2', '#05F2F2', '#F2CB05']; // デフォルトの背景色オプション
     const defaultTextColors = ['#EEEEEE']; // デフォルトのテキスト色オプション
+    const defaultBootstrapIcon = '';
 
     // パラメータの取得
     const params = getParams(element.src);
     const width = parseInt(params.width || defaultWidth);
     const height = parseInt(params.height || defaultHeight);
     const text = decodeURIComponent(params.text || `${width}x${height}`);
+    const bootstrap_icon = decodeURIComponent(params.bicon || `${defaultBootstrapIcon}`);
     const bgcolorOptions = decodeURIComponent(params.bgcolors || defaultBgColors.join('#')).split('#').filter(c => c);
     const textColorOptions = decodeURIComponent(params.colors || defaultTextColors.join('#')).split('#').filter(c => c);
 
@@ -32,8 +34,6 @@ function placeholderableGenerateImage(element) {
     // 背景色とテキスト色をランダムに選択
     const bgcolor = `#${bgcolorOptions[Math.floor(Math.random() * bgcolorOptions.length)]}`;
     const textColor = `#${textColorOptions[Math.floor(Math.random() * textColorOptions.length)]} `;
-    // const bgcolor = defaultBgColors[Math.floor(Math.random() * defaultBgColors.length)];
-    // const textColor = defaultTextColors[0]; // この例では常に最初の色を使用
 
     // Canvasを作成
     const canvas = document.createElement('canvas');
@@ -47,14 +47,25 @@ function placeholderableGenerateImage(element) {
 
     // フォントサイズとフォントスタイルを設定
     const fontSize = Math.max(Math.min(width / (text.length < 10 ? 10 : text.length) * 2, height / 2), 10);
-    ctx.font = `${fontSize}px Arial`;
-    ctx.fillStyle = textColor;
 
+    ctx.fillStyle = textColor;
 
     // テキストを中央に描画
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText(text, width / 2, height / 2);
+    if (bootstrap_icon != '') {
+        // document.fonts.load('10pt Bootstrap-Icons').then(function () {
+        ctx.font = `${fontSize}px Bootstrap-Icons`;
+        // ctx.font = `48px Bootstrap-Icons`;
+        ctx.fillText(String.fromCharCode(`0x${bootstrap_icon}`), width / 2, height / 2);
+
+        // });
+    }
+    else {
+        ctx.font = `${fontSize}px Arial`;
+        ctx.fillText(text, width / 2, height / 2);
+    }
+
 
 
     // imgタグのsrcにcanvasの内容を設定
