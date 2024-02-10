@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="container-sm">
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center" id="demo"></div>
+                <h2 class="text-center">placeholderable</h2>
+
+            </div>
+            <div class="col-12 mt-4">
+                <p class=" text-center lead">placeholderable is a simple and lightweight JavaScript library that
+                    generates
+                    placeholder images on the client side. It is useful for web designers and developers who want to
+                    create placeholder images quickly and easily.
+                </p>
+            </div>
+            <div class="col-12 mt-4">
+                <h2>CDN</h2>
+                <button class="btn btn-sm btn-outline-dark" data-clipboard-target="#cdn"><i
+                        class="bi bi-clipboard"></i></button>
+                <code id="cdn">sdfadsf</code>
+
+            </div>
+            <div class="col-12 mt-4">
+
+                <table class="table mt-4 text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="text-center">copy</th>
+                            <th scope="col" class="text-center">HTML tag</th>
+                            <th scope="col" class="text-center">result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <button class="btn btn-sm btn-outline-dark" data-clipboard-target="#sample01"><i
+                                        class="bi bi-clipboard"></i></button>
+
+                            </td>
+                            <td>
+                                <pre class="text-wrap"><code id="sample01">&lt;img data-ph /&gt;</code></pre>
+                                </pre>
+                            </td>
+                            <td>
+                                <img data-ph class="img-fluid" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="btn btn-sm btn-outline-dark" data-clipboard-target="#sample02"><i
+                                        class="bi bi-clipboard"></i></button>
+                            </td>
+                            <td>
+                                <pre class="text-wrap"><code class="text-break" id="sample02">&lt;img data-ph data-ph-width="150"
+                                    data-ph-height="150" /&gt;</code></pre>
+                            </td>
+                            <td>
+                                <img data-ph data-ph-width="150" data-ph-height="150" class="img-fluid" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="btn btn-sm btn-outline-dark" data-clipboard-target="#sample03"><i
+                                        class="bi bi-clipboard"></i></button>
+                            </td>
+                            <td>
+                                <pre
+                                    class="text-wrap"><code id="sample03">&lt;img data-ph data-ph-text="hello, placeholderable" /&gt;</code></pre>
+                            </td>
+                            <td>
+                                <img data-ph data-ph-text="hello, placeholderable" class="img-fluid" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="btn btn-sm btn-outline-dark" data-clipboard-target="#sample04"><i
+                                        class="bi bi-clipboard"></i></button>
+                            </td>
+                            <td>
+                                <pre
+                                    class="text-wrap"><code id="sample04">&lt;img data-ph data-ph-bgcolors="#FF5555" /&gt;</code></pre>
+                            </td>
+                            <td>
+                                <img data-ph data-ph-bgcolors="#FF5555" class="img-fluid" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="btn btn-sm btn-outline-dark" data-clipboard-target="#sample05"><i
+                                        class="bi bi-clipboard"></i></button>
+                            </td>
+                            <td>
+                                <pre
+                                    class="text-wrap"><code id="sample05">&lt;img data-ph data-ph-bgcolors="#FF5555#55FF55#5555FF" /&gt;</code></pre>
+                            </td>
+                            <td>
+                                <img data-ph data-ph-bgcolors="#FF5555#55FF55#5555FF" class="img-fluid" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="btn btn-sm btn-outline-dark" data-clipboard-target="#sample06"><i
+                                        class="bi bi-clipboard"></i></button>
+                            </td>
+                            <td>
+                                <pre
+                                    class="text-wrap"><code id="sample06">&lt;img data-ph data-ph-colors="#FF5555" /&gt;</code></pre>
+                            </td>
+                            <td>
+                                <img data-ph data-ph-colors="#FF5555" class="img-fluid" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="btn btn-sm btn-outline-dark" data-clipboard-target="#sample07"><i
+                                        class="bi bi-clipboard"></i></button>
+                            </td>
+                            <td>
+                                <pre
+                                    class="text-wrap"><code id="sample07">&lt;img data-ph data-ph-colors="#FF5555#55FF55#5555FF" /&gt;</code></pre>
+                            </td>
+                            <td>
+                                <img data-ph data-ph-colors="#FF5555#55FF55#5555FF" class="img-fluid" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <footer class="small text-muted text-center mb-4">
+                    2024 &copy; <a href="https://github.com/TetsuakiBaba/placeholderable" target="_blank"><i
+                            class="bi bi-github"></i></a> <a href="https://tetsuakibaba.jp" target="_blank">Tetsuaki
+                        BABA</a>. All rights reserved.
+                </footer>
+            </div>
+        </div>
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+<script src="placeholderable.js"></script>
+
+<script>
+    // 50こまでの画像を生成
+    function createSamples() {
+        for (let i = 1; i <= 50; i++) {
+            const img = document.createElement('img');
+            img.setAttribute('data-ph', '');
+            img.setAttribute('data-ph-text', ` `);
+            img.setAttribute('data-ph-width', '5');
+            img.setAttribute('data-ph-height', '200');
+            document.querySelector('#demo').appendChild(img);
+        }
+    }
+    createSamples();
+    // すべてのimgタグに対して画像を生成
+    window.onload = function () {
+        placeholderable();
+        new ClipboardJS('.btn');
+    };
+</script>
+</body>
+
+</html>
