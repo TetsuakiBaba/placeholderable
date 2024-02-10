@@ -9,8 +9,8 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
-        table {
-            font-size: 0.8em;
+        p {
+            text-justify: auto;
         }
     </style>
 </head>
@@ -20,11 +20,14 @@
         <div class="row">
             <div class="col-12">
                 <div class="text-center" id="demo"></div>
-                <h1 class="text-center">placeholderable</h1>
+                <h1 class="text-center display-6">placeholderable</h1>
+                <iframe
+                    src="https://ghbtns.com/github-btn.html?user=TetsuakiBaba&repo=placeholderable&type=star&count=true&v=2"
+                    frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
 
             </div>
             <div class="col-12 mt-4">
-                <p class=" text-center lead">placeholderable is a simple and lightweight JavaScript library that
+                <p class="lead">placeholderable is a simple and lightweight JavaScript library that
                     generates
                     placeholder images on the client side. It is useful for web designers and developers who want to
                     create placeholder images quickly and easily.
@@ -79,9 +82,9 @@ const defaultTextColors = ['#EEEEEE'];</code></pre>
                     <thead>
                         <tr>
                             <th scope="col" width="10%" class="">example</th>
-                            <th scope="col" class="text-center">copy</th>
-                            <th scope="col" class="text-center">HTML tag</th>
-                            <th scope="col" class="text-center">result</th>
+                            <th scope="col" class="5%">copy</th>
+                            <th scope="col" width="40%" class="text-center">HTML tag</th>
+                            <th scope="col" class="">result</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -185,18 +188,21 @@ const defaultTextColors = ['#EEEEEE'];</code></pre>
                             </td>
                         </tr>
                         <tr>
-                            <th>bootstrap icon <a href="https://icons.getbootstrap.com/" target="_blank"><i
-                                        class="bi bi-bootstrap-fill"></i></a> (text and bicon cannot be specified at the
+                            <th>icon <a href="https://icons.getbootstrap.com/" target="_blank"><i
+                                        class="bi bi-bootstrap-fill"></i></a> (text and icon cannot be specified at the
                                 same time)</th>
                             <td>
-                                <button class="btn btn-sm btn-outline-dark" data-clipboard-target="#sample07"><i
+                                <button class="btn btn-sm btn-outline-dark" data-clipboard-target="#sample08"><i
                                         class="bi bi-clipboard"></i></button>
                             </td>
                             <td>
-                                <pre class="text-wrap"><code id="sample07">&lt;img src=" ?bicon=F8D8" /&gt;</code></pre>
+                                <pre class="text-wrap"><code id="sample08">&lt;img src=" ?icon=F8D8" /&gt;</code></pre>
+                                <div class="alert alert-warning" role="alert">
+                                    <i class="bi bi-exclamation-diamond"></i>
+                                    The icon parameter is a hexadecimal value (code point) of the icon.
                             </td>
                             <td>
-                                <img src=" ?bicon=F8DB" class="img-fluid" />
+                                <img src=" ?icon=F8DB" class="img-fluid" />
                             </td>
                         </tr>
                     </tbody>
