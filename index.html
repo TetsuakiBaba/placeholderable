@@ -8,6 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        table {
+            font-size: 0.8em;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,7 +20,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="text-center" id="demo"></div>
-                <h2 class="text-center">placeholderable</h2>
+                <h1 class="text-center">placeholderable</h1>
 
             </div>
             <div class="col-12 mt-4">
@@ -26,8 +31,8 @@
                 </p>
             </div>
             <div class="col-12 mt-4">
-                <h1>Setup</h1>
-                <p>1. Include the following code in the head section of your HTML file.</p>
+                <h1>Getting Started</h1>
+                <p>Just only include the following code in the head section of your HTML file.</p>
                 <button class="btn btn-sm btn-outline-dark" data-clipboard-target="#cdn"><i
                         class="bi bi-clipboard"></i></button>
                 <div class="alert alert-light" role="alert">
@@ -35,16 +40,14 @@
                         id="cdn">&lt;script src="https://cdn.jsdelivr.net/gh/TetsuakiBaba/placeholderable@3afffc9/placeholderable.js" crossorigin="anonymous" type="text/javascript">&lt;/script&gt;</code>
                         </pre>
                 </div>
-                <p>2. Call placeholderable() after completion of dom loading in the following manner.</p>
-                <button class="btn btn-sm btn-outline-dark" data-clipboard-target="#usage"><i
-                        class="bi bi-clipboard"></i></button>
-                <div class="alert alert-light" role="alert">
-                    <pre><code id="usage">window.onload = function () {placeholderable();};</code></pre>
-                </div>
             </div>
             <h1>Usage</h1>
             <p>
-                By inserting a space in the src attribute within the img tag, you can indicate that the img is an image
+                By inserting a space in the src attribute, &lt;img src=" "&gt; <span class="bg-warning">(needs a
+                    space!!)</span>, within
+                the img
+                tag, you can indicate
+                that the img is an image
                 insert for use by the placeholderable. Options such as color, text, etc. can be added after the space
                 with "?" symbol after the space.
             </p>
@@ -52,11 +55,23 @@
                 Copy and paste the following sample code anywhere you like in the
                 body tag of your HTML file to see how it works.
             </p>
+            <p>
+                If no parameters are specified, the default values are as follows
+            <div class="alert alert-light" role="alert">
+                <pre><code>
+const defaultWidth = 200;
+const defaultHeight = 100;
+const defaultText = `${defaultWidth}x${defaultHeight}`; 
+const defaultBgColors = ['#F2529D', '#A99CD9', '#9080F2', '#05F2F2', '#F2CB05']; 
+const defaultTextColors = ['#EEEEEE'];</code></pre>
+            </div>
+            </p>
             <div class="col-12">
 
-                <table class="table mt-4 text-center">
+                <table class="table mt-4">
                     <thead>
                         <tr>
+                            <th scope="col" width="10%" class="">example</th>
                             <th scope="col" class="text-center">copy</th>
                             <th scope="col" class="text-center">HTML tag</th>
                             <th scope="col" class="text-center">result</th>
@@ -64,6 +79,7 @@
                     </thead>
                     <tbody>
                         <tr>
+                            <th>default</th>
                             <td>
                                 <button class="btn btn-sm btn-outline-dark" data-clipboard-target="#sample01"><i
                                         class="bi bi-clipboard"></i></button>
@@ -78,6 +94,7 @@
                             </td>
                         </tr>
                         <tr>
+                            <th>image size</th>
                             <td>
                                 <button class="btn btn-sm btn-outline-dark" data-clipboard-target="#sample02"><i
                                         class="bi bi-clipboard"></i></button>
@@ -91,6 +108,7 @@
                             </td>
                         </tr>
                         <tr>
+                            <th>text</th>
                             <td>
                                 <button class="btn btn-sm btn-outline-dark" data-clipboard-target="#sample03"><i
                                         class="bi bi-clipboard"></i></button>
@@ -104,6 +122,7 @@
                             </td>
                         </tr>
                         <tr>
+                            <th>background color</th>
                             <td>
                                 <button class="btn btn-sm btn-outline-dark" data-clipboard-target="#sample04"><i
                                         class="bi bi-clipboard"></i></button>
@@ -117,42 +136,45 @@
                             </td>
                         </tr>
                         <tr>
+                            <th>multiple background colors(random appear)</th>
                             <td>
                                 <button class="btn btn-sm btn-outline-dark" data-clipboard-target="#sample05"><i
                                         class="bi bi-clipboard"></i></button>
                             </td>
                             <td>
                                 <pre
-                                    class="text-wrap"><code id="sample05">&lt;img src=" ?bgcolors="#FF5555#55FF55#5555FF" /&gt;</code></pre>
+                                    class="text-wrap"><code id="sample05">&lt;img src=" ?bgcolors="#FF5555#55FF55" /&gt;</code></pre>
                             </td>
                             <td>
-                                <img src=" ?bgcolors=#FF5555#55FF55#5555FF" class="img-fluid" />
+                                <img src=" ?bgcolors=#FF5555#55FF55" class="img-fluid" />
                             </td>
                         </tr>
                         <tr>
+                            <th>text color</th>
                             <td>
                                 <button class="btn btn-sm btn-outline-dark" data-clipboard-target="#sample06"><i
                                         class="bi bi-clipboard"></i></button>
                             </td>
                             <td>
                                 <pre
-                                    class="text-wrap"><code id="sample06">&lt;img src=" ?colors=#FF5555" /&gt;</code></pre>
+                                    class="text-wrap"><code id="sample06">&lt;img src=" ?colors=#000000" /&gt;</code></pre>
                             </td>
                             <td>
-                                <img src=" ?colors=#FF5555" class="img-fluid" />
+                                <img src=" ?colors=#000000" class="img-fluid" />
                             </td>
                         </tr>
                         <tr>
+                            <th>multiple text colors(random appear)</th>
                             <td>
                                 <button class="btn btn-sm btn-outline-dark" data-clipboard-target="#sample07"><i
                                         class="bi bi-clipboard"></i></button>
                             </td>
                             <td>
                                 <pre
-                                    class="text-wrap"><code id="sample07">&lt;img src=" ?colors=#FF5555#55FF55#5555FF" /&gt;</code></pre>
+                                    class="text-wrap"><code id="sample07">&lt;img src=" ?colors=#FF5555#55FF55" /&gt;</code></pre>
                             </td>
                             <td>
-                                <img src=" ?colors=#FF5555#55FF55#5555FF" class="img-fluid" />
+                                <img src=" ?colors=#FF5555#55FF55" class="img-fluid" />
                             </td>
                         </tr>
                     </tbody>
@@ -188,7 +210,6 @@
 
     // すべてのimgタグに対して画像を生成
     window.onload = function () {
-        placeholderable();
         new ClipboardJS('.btn');
     };
 </script>

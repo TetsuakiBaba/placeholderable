@@ -28,9 +28,12 @@ function placeholderableGenerateImage(element) {
     const textColorOptions = decodeURIComponent(params.colors || defaultTextColors.join('#')).split('#').filter(c => c);
 
 
+
     // 背景色とテキスト色をランダムに選択
-    const bgcolor = defaultBgColors[Math.floor(Math.random() * defaultBgColors.length)];
-    const textColor = defaultTextColors[0]; // この例では常に最初の色を使用
+    const bgcolor = `#${bgcolorOptions[Math.floor(Math.random() * bgcolorOptions.length)]}`;
+    const textColor = `#${textColorOptions[Math.floor(Math.random() * textColorOptions.length)]} `;
+    // const bgcolor = defaultBgColors[Math.floor(Math.random() * defaultBgColors.length)];
+    // const textColor = defaultTextColors[0]; // この例では常に最初の色を使用
 
     // Canvasを作成
     const canvas = document.createElement('canvas');
@@ -53,7 +56,7 @@ function placeholderableGenerateImage(element) {
     ctx.textBaseline = 'middle';
     ctx.fillText(text, width / 2, height / 2);
 
-    console.log(text);
+
     // imgタグのsrcにcanvasの内容を設定
     element.src = canvas.toDataURL('image/png');
 }
