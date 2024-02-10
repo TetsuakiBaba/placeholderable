@@ -24,7 +24,6 @@
                 <iframe
                     src="https://ghbtns.com/github-btn.html?user=TetsuakiBaba&repo=placeholderable&type=star&count=true&v=2"
                     frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
-
             </div>
             <div class="col-12 mt-4">
                 <p class="lead">placeholderable is a simple and lightweight JavaScript library that
@@ -33,6 +32,14 @@
                     create placeholder images quickly and easily.
                 </p>
             </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-8 mx-auto">
+                    <div class="alert alert-light" role="alert">
+                        <img src="teaser.gif" class="img-fluid" alt="teaser">
+                    </div>
+                </div>
+            </div>
+
             <div class="col-12 mt-4">
                 <h1>Getting Started</h1>
                 <p>Just only include the following code in the head section of your HTML file.</p>
@@ -40,14 +47,17 @@
                         class="bi bi-clipboard"></i></button>
                 <div class="alert alert-light" role="alert">
                     <pre class="text-wrap"><code 
-                        id="cdn">&lt;script src="https://cdn.jsdelivr.net/gh/TetsuakiBaba/placeholderable@5dbac43/placeholderable.js" crossorigin="anonymous" type="text/javascript">&lt;/script&gt;</code>
+                        id="cdn">&lt;script src="https://cdn.jsdelivr.net/gh/TetsuakiBaba/placeholderable@b874e0c
+                        /placeholderable.js" crossorigin="anonymous" type="text/javascript">&lt;/script&gt;</code>
                         </pre>
                 </div>
                 <div class="alert alert-warning" role="alert">
                     <i class="bi bi-exclamation-diamond "></i>
                     If you are dynamically generating img tags using javascript or other methods, call the
-                    placeholderable() function after the DOM generation is complete. placeholderable() function checks
-                    all img tags and returns the corresponding part in the canvas replace the corresponding part with
+                    placeholderable() function after the DOM generation is complete. placeholderable() function
+                    checks
+                    all img tags and returns the corresponding part in the canvas replace the corresponding part
+                    with
                     the canvas.
                 </div>
             </div>
@@ -58,7 +68,8 @@
                 the img
                 tag, you can indicate
                 that the img is an image
-                insert for use by the placeholderable. Options such as color, text, etc. can be added after the space
+                insert for use by the placeholderable. Options such as color, text, etc. can be added after the
+                space
                 with "?" symbol after the space.
             </p>
             <p>
@@ -189,7 +200,8 @@ const defaultTextColors = ['#EEEEEE'];</code></pre>
                         </tr>
                         <tr>
                             <th>icon <a href="https://icons.getbootstrap.com/" target="_blank"><i
-                                        class="bi bi-bootstrap-fill"></i></a> (text and icon cannot be specified at the
+                                        class="bi bi-bootstrap-fill"></i></a> (text and icon cannot be specified at
+                                the
                                 same time)</th>
                             <td>
                                 <button class="btn btn-sm btn-outline-dark" data-clipboard-target="#sample08"><i
