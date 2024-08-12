@@ -44,6 +44,8 @@
                 </div>
             </div>
 
+
+
             <div class="col-12 mt-4">
                 <h1>Setup</h1>
                 <p>Just only include the following code in the head section of your HTML file.</p>
@@ -66,7 +68,8 @@
             </div>
             <h1>Usage</h1>
             <p>
-                By inserting a space in the src attribute, &lt;img src=" "&gt; <span class="bg-warning">(needs a
+                By inserting a space in the src attribute, &lt;img src=" "&gt; or &lt;video poster=" "&gt; <span
+                    class="bg-warning">(needs a
                     space!!)</span>, within
                 the img
                 tag, you can indicate
@@ -112,9 +115,13 @@ const defaultTextColors = ['#EEEEEE'];</code></pre>
                             <td>
                                 <pre class="text-wrap"><code id="sample01">&lt;img src=" " /&gt;</code></pre>
                                 </pre>
+                                <pre class="text-wrap"><code id="sample01">&lt;video poster=" " /&gt;</code></pre>
+                                </pre>
                             </td>
                             <td>
-                                <img src=" " class="img-fluid" />
+                                <img src=" " class="img-fluid mb-3" />
+                                <video class="img-fluid" controls poster=" ">
+                                </video>
                             </td>
                         </tr>
                         <tr>
